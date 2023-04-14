@@ -16,7 +16,7 @@
     <button id="setTitle">Set title</button>
     <script>
         document.getElementById("setTitle").addEventListener("click", () => {
-            document.title = document.getElementById("title").value
+            document.title = document.getElementById("title").value;
             window.history.replaceState(null, null, document.title);
         })
     </script>
