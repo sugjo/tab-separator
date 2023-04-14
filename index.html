@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="bookmark.svg" type="image/x-icon">
+    <title>Tab Separator</title>
+</head>
+
+<body>
+    The title of this page is a separator for browser tabs
+    <br>
+    <input type="text" id="title">
+    <button id="setTitle">Set title</button>
+    <script>
+        document.getElementById("setTitle").addEventListener("click", () => {
+            document.title = document.getElementById("title").value
+            window.history.replaceState(null, null, document.title);
+        })
+    </script>
+</body>
+
+</html>
